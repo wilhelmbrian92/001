@@ -34,6 +34,8 @@ namespace CRUD
                     Logica negocio = new Logica();
                     negocio.altaProducto(txtNombre.Text, txtTipo.Text);
                     MessageBox.Show("El proceso ha finalizado exitosamente.");
+                    txtNombre.Text = "";
+                    txtTipo.Text = "";
                 }
                 catch (Exception z)
                 {
