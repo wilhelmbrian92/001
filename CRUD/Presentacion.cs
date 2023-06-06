@@ -24,5 +24,12 @@ namespace CRUD
             
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Consulta frmConsulta = new Consulta();
+            frmConsulta.ShowDialog();
+
+        }
     }
 }
