@@ -52,11 +52,11 @@
     <Compile Include="Alta.Designer.cs">
       <DependentUpon>Alta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Baja.cs">
+    <Compile Include="Calendario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Baja.Designer.cs">
-      <DependentUpon>Baja.cs</DependentUpon>
+    <Compile Include="Calendario.Designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
     </Compile>
     <Compile Include="Consulta.cs">
       <SubType>Form</SubType>
@@ -76,6 +76,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Alta.resx">
       <DependentUpon>Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta.resx">
       <DependentUpon>Consulta.cs</DependentUpon>

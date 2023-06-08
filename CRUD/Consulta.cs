@@ -28,7 +28,7 @@ namespace CRUD
                 //https://easynetstudio.wixsite.com/easynetstudio/datagridview-sql-server-en-c-sharp
 
                 //definir la consulta sql server
-                string sql = "select * from productos";
+                string sql = "SELECT * FROM VistaProductoLote";
 
                  string s = "workstation id=wilsql92.mssql.somee.com;packet size=4096;user id=wilhelmbrian92_SQLLogin_1;pwd=91omw2ur8i;data source=wilsql92.mssql.somee.com;persist security info=False;initial catalog=wilsql92";
 
@@ -61,7 +61,6 @@ namespace CRUD
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
-        }
+            this.Close();      }
     }
 }

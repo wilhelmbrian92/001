@@ -31,5 +31,11 @@ namespace CRUD
             frmConsulta.ShowDialog();
 
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Calendario frmCalendario = new Calendario();
+            frmCalendario.ShowDialog();
+        }
     }
 }

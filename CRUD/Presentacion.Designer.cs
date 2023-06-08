@@ -30,6 +30,7 @@
         {
             this.linkLblAlta = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // linkLblAlta
@@ -38,13 +39,13 @@
             this.linkLblAlta.AutoSize = true;
             this.linkLblAlta.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLblAlta.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.linkLblAlta.Location = new System.Drawing.Point(58, 68);
+            this.linkLblAlta.Location = new System.Drawing.Point(58, 69);
             this.linkLblAlta.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLblAlta.Name = "linkLblAlta";
-            this.linkLblAlta.Size = new System.Drawing.Size(161, 24);
+            this.linkLblAlta.Size = new System.Drawing.Size(224, 24);
             this.linkLblAlta.TabIndex = 0;
             this.linkLblAlta.TabStop = true;
-            this.linkLblAlta.Text = "Alta de producto";
+            this.linkLblAlta.Text = "Alta de nuevo producto";
             this.linkLblAlta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblAlta_LinkClicked);
             // 
             // linkLabel1
@@ -56,11 +57,26 @@
             this.linkLabel1.Location = new System.Drawing.Point(58, 163);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(92, 24);
+            this.linkLabel1.Size = new System.Drawing.Size(187, 24);
             this.linkLabel1.TabIndex = 1;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Consulta";
+            this.linkLabel1.Text = "Consultar registros";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.DarkViolet;
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.linkLabel2.Location = new System.Drawing.Point(58, 263);
+            this.linkLabel2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(269, 24);
+            this.linkLabel2.TabIndex = 2;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Calendario de vencimientos";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // Presentacion
             // 
@@ -69,6 +85,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1366, 745);
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.linkLblAlta);
             this.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -87,6 +104,7 @@
 
         private System.Windows.Forms.LinkLabel linkLblAlta;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
 
