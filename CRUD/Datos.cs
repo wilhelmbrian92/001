@@ -28,7 +28,7 @@ namespace CRUD
             setTipo(tipo);
             SqlConnection conexion = new SqlConnection(s);
             conexion.Open();
-            SqlCommand comando = new SqlCommand("insert into productos(nombre,tipo) values('" +
+            SqlCommand comando = new SqlCommand("insert into Producto(Nombre,Tipo) values('" +
                               Nombre + "','" + Tipo + "')", conexion);
             comando.ExecuteNonQuery();
             

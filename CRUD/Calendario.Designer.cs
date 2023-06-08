@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.calendarioVencimientos = new System.Windows.Forms.MonthCalendar();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // calendarioVencimientos
@@ -38,23 +39,36 @@
             this.calendarioVencimientos.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.calendarioVencimientos.Name = "calendarioVencimientos";
             this.calendarioVencimientos.TabIndex = 0;
-
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(698, 539);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(46, 13);
+            this.linkLabel1.TabIndex = 15;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "< Volver";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Calendario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.calendarioVencimientos);
             this.Name = "Calendario";
             this.Text = "Calendario";
             this.Load += new System.EventHandler(this.Calendario_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.MonthCalendar calendarioVencimientos;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

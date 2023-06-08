@@ -44,6 +44,9 @@ namespace CRUD
             return new DateTime[] { fecha1, fecha2, fecha3 };
         }
 
-
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
