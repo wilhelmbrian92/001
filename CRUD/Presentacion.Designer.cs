@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.linkLblAlta = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLblConsulta = new System.Windows.Forms.LinkLabel();
+            this.linkLblCalendario = new System.Windows.Forms.LinkLabel();
+            this.linkLblEntradas = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // linkLblAlta
@@ -42,41 +43,56 @@
             this.linkLblAlta.Location = new System.Drawing.Point(58, 69);
             this.linkLblAlta.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLblAlta.Name = "linkLblAlta";
-            this.linkLblAlta.Size = new System.Drawing.Size(224, 24);
+            this.linkLblAlta.Size = new System.Drawing.Size(174, 24);
             this.linkLblAlta.TabIndex = 0;
             this.linkLblAlta.TabStop = true;
-            this.linkLblAlta.Text = "Alta de nuevo producto";
+            this.linkLblAlta.Text = "Ingresar producto";
             this.linkLblAlta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblAlta_LinkClicked);
             // 
-            // linkLabel1
+            // linkLblConsulta
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DarkViolet;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.linkLabel1.Location = new System.Drawing.Point(58, 163);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(187, 24);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Consultar registros";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLblConsulta.ActiveLinkColor = System.Drawing.Color.DarkViolet;
+            this.linkLblConsulta.AutoSize = true;
+            this.linkLblConsulta.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLblConsulta.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.linkLblConsulta.Location = new System.Drawing.Point(58, 227);
+            this.linkLblConsulta.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.linkLblConsulta.Name = "linkLblConsulta";
+            this.linkLblConsulta.Size = new System.Drawing.Size(187, 24);
+            this.linkLblConsulta.TabIndex = 1;
+            this.linkLblConsulta.TabStop = true;
+            this.linkLblConsulta.Text = "Consultar registros";
+            this.linkLblConsulta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // linkLabel2
+            // linkLblCalendario
             // 
-            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.DarkViolet;
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.linkLabel2.Location = new System.Drawing.Point(58, 263);
-            this.linkLabel2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(269, 24);
-            this.linkLabel2.TabIndex = 2;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Calendario de vencimientos";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.linkLblCalendario.ActiveLinkColor = System.Drawing.Color.DarkViolet;
+            this.linkLblCalendario.AutoSize = true;
+            this.linkLblCalendario.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLblCalendario.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.linkLblCalendario.Location = new System.Drawing.Point(58, 307);
+            this.linkLblCalendario.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.linkLblCalendario.Name = "linkLblCalendario";
+            this.linkLblCalendario.Size = new System.Drawing.Size(269, 24);
+            this.linkLblCalendario.TabIndex = 2;
+            this.linkLblCalendario.TabStop = true;
+            this.linkLblCalendario.Text = "Calendario de vencimientos";
+            this.linkLblCalendario.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // linkLblEntradas
+            // 
+            this.linkLblEntradas.ActiveLinkColor = System.Drawing.Color.DarkViolet;
+            this.linkLblEntradas.AutoSize = true;
+            this.linkLblEntradas.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLblEntradas.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.linkLblEntradas.Location = new System.Drawing.Point(58, 146);
+            this.linkLblEntradas.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.linkLblEntradas.Name = "linkLblEntradas";
+            this.linkLblEntradas.Size = new System.Drawing.Size(175, 24);
+            this.linkLblEntradas.TabIndex = 3;
+            this.linkLblEntradas.TabStop = true;
+            this.linkLblEntradas.Text = "Ingresar registros";
+            this.linkLblEntradas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblEntradas_LinkClicked);
             // 
             // Presentacion
             // 
@@ -85,8 +101,9 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1366, 745);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkLblEntradas);
+            this.Controls.Add(this.linkLblCalendario);
+            this.Controls.Add(this.linkLblConsulta);
             this.Controls.Add(this.linkLblAlta);
             this.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
@@ -103,8 +120,9 @@
         #endregion
 
         private System.Windows.Forms.LinkLabel linkLblAlta;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLblConsulta;
+        private System.Windows.Forms.LinkLabel linkLblCalendario;
+        private System.Windows.Forms.LinkLabel linkLblEntradas;
     }
 }
 

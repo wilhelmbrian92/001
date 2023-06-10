@@ -37,5 +37,10 @@ namespace CRUD
             Calendario frmCalendario = new Calendario();
             frmCalendario.ShowDialog();
         }
+
+        private void linkLblEntradas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Registrar_ENTRADA frmEntradaLote = new Registrar_ENTRADA();
+        }
     }
 }
