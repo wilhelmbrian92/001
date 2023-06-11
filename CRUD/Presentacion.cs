@@ -41,6 +41,7 @@ namespace CRUD
         private void linkLblEntradas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Registrar_ENTRADA frmEntradaLote = new Registrar_ENTRADA();
+            frmEntradaLote.ShowDialog();
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.lblProducto = new System.Windows.Forms.Label();
             this.lblProveedor = new System.Windows.Forms.Label();
-            this.cboxProducto = new System.Windows.Forms.ComboBox();
+            this.cboxProductos = new System.Windows.Forms.ComboBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.rbtnSecretaria = new System.Windows.Forms.RadioButton();
             this.rbtnRemediar = new System.Windows.Forms.RadioButton();
@@ -60,17 +60,18 @@
             this.lblProveedor.TabIndex = 1;
             this.lblProveedor.Text = "Proveedor: ";
             // 
-            // cboxProducto
+            // cboxProductos
             // 
-            this.cboxProducto.FormattingEnabled = true;
-            this.cboxProducto.Location = new System.Drawing.Point(100, 40);
-            this.cboxProducto.Name = "cboxProducto";
-            this.cboxProducto.Size = new System.Drawing.Size(204, 21);
-            this.cboxProducto.TabIndex = 2;
+            this.cboxProductos.FormattingEnabled = true;
+            this.cboxProductos.Location = new System.Drawing.Point(100, 40);
+            this.cboxProductos.Name = "cboxProductos";
+            this.cboxProductos.Size = new System.Drawing.Size(204, 21);
+            this.cboxProductos.TabIndex = 2;
+            this.cboxProductos.SelectedIndexChanged += new System.EventHandler(this.cboxProductos_SelectedIndexChanged);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(100, 253);
+            this.btnAceptar.Location = new System.Drawing.Point(125, 258);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 3;
@@ -163,11 +164,12 @@
             this.Controls.Add(this.rbtnRemediar);
             this.Controls.Add(this.rbtnSecretaria);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.cboxProducto);
+            this.Controls.Add(this.cboxProductos);
             this.Controls.Add(this.lblProveedor);
             this.Controls.Add(this.lblProducto);
             this.Name = "Registrar_ENTRADA";
             this.Text = "Registrar ENTRADA";
+            this.Load += new System.EventHandler(this.Registrar_ENTRADA_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,7 +179,7 @@
 
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.Label lblProveedor;
-        private System.Windows.Forms.ComboBox cboxProducto;
+        private System.Windows.Forms.ComboBox cboxProductos;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.RadioButton rbtnSecretaria;
         private System.Windows.Forms.RadioButton rbtnRemediar;

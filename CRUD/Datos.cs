@@ -34,8 +34,67 @@ namespace CRUD
             
             conexion.Close();
         }
-        
 
+        public string [] ObtenerNombresProductos()
+        {
+            //en este método se obtiene los nombres de todos los productos para mostrarlos en el combobox
+            string query = "SELECT Nombre FROM Producto";
+
+            using (SqlConnection connection = new SqlConnection(s))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    // Crear una lista para almacenar los nombres de los productos
+                    List<string> nombresProductos = new List<string>();
+
+                    while (reader.Read())
+                    {
+                        string nombreProducto = reader.GetString(0);
+                        nombresProductos.Add(nombreProducto);
+                    }
+
+                    reader.Close();
+
+                    return nombresProductos.ToArray();
+                }
+            }
+        }
+
+        public int ObtenerIDProducto(string nombreProducto)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(s))
+                {
+                    connection.Open();
+
+                    string query = "SELECT ID FROM Producto WHERE Nombre = @Nombre";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Nombre", nombreProducto);
+
+                        object result = command.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            return Convert.ToInt32(result);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores en caso de fallo en la consulta
+                Console.WriteLine("Ha ocurrido un error al obtener el ID del producto: " + ex.Message);
+            }
+
+            return 0; // Valor predeterminado si no se encuentra el producto o hay un error
+        }
     }
 
 }

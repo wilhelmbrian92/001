@@ -13,59 +13,56 @@ namespace CRUD
 {
     public partial class Registrar_ENTRADA : Form
     {
+        int idProducto;
+        string proveedor;
+        Logica logica = new Logica();
+
+        //constructor
         public Registrar_ENTRADA()
         {
             InitializeComponent();
+
+            CargarNombresProductos();
+            
         }
 
+        private void Registrar_ENTRADA_Load(object sender, EventArgs e)
+        {
+            rbtnSecretaria.Checked = true;
+        }
+
+
+        private void CargarNombresProductos()
+        {
+            cboxProductos.Items.Clear();
+            cboxProductos.Items.AddRange(logica.ObtenerNombresProductos());
+
+            // Habilitar la función de autocompletar y establecer la fuente de autocompletar como CustomSource
+            cboxProductos.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cboxProductos.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+            // Establecer la lista de sugerencias para el autocompletar utilizando los nombres de los productos
+            cboxProductos.AutoCompleteCustomSource.AddRange(logica.ObtenerNombresProductos());
+        }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            // Cadena de conexión a la base de datos
-            string connectionString = "workstation id=wilsql92.mssql.somee.com;packet size=4096;user id=wilhelmbrian92_SQLLogin_1;pwd=91omw2ur8i;data source=wilsql92.mssql.somee.com;persist security info=False;initial catalog=wilsql92";
-
-            // Datos de ejemplo para la entrada
-            //loteID sale de la consulta del combo box 
-            int loteID = 1;
-            DateTime fechaEntrada = DateTime.Now;
-            string proveedor;
-            if (rbtnSecretaria.Checked) proveedor = "Secretaría";
-            else proveedor = "Remediar";
-
-            // Inserción de datos en la tabla Entradas
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-
-                // Consulta SQL para la inserción
-                string query = "INSERT INTO Entradas (LoteID, FechaEntrada, Proveedor) VALUES (@LoteID, @FechaEntrada, @Proveedor)";
-
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    // Parámetros de la consulta
-                    command.Parameters.AddWithValue("@LoteID", loteID);
-                    command.Parameters.AddWithValue("@FechaEntrada", fechaEntrada);
-                    command.Parameters.AddWithValue("@Proveedor", proveedor);
-
-                    // Ejecutar la consulta
-                    int rowsAffected = command.ExecuteNonQuery();
-
-                    // Verificar si la inserción fue exitosa
-                    if (rowsAffected > 0)
-                    {
-                        Console.WriteLine("Los datos se han cargado correctamente en la tabla Entradas.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ha ocurrido un error al cargar los datos en la tabla Entradas.");
-                    }
-                }
-            }
+            MessageBox.Show(idProducto.ToString()+proveedor);
         }
 
         private void rbtnSecretaria_CheckedChanged(object sender, EventArgs e)
         {
+            if (rbtnSecretaria.Checked) proveedor = "Secretaría";
+            if (rbtnRemediar.Checked) proveedor = "Remediar";
             if (rbtnSecretaria.Checked == false) rbtnRemediar.Checked = true;
             else rbtnSecretaria.Checked = true;
         }
+
+        private void cboxProductos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string nombreProducto = cboxProductos.SelectedItem.ToString();
+            idProducto = logica.ObtenerIDProducto(nombreProducto);
+        }
+
+        
     }
 }
