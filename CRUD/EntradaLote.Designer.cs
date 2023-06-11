@@ -65,7 +65,7 @@
             this.cboxProductos.Name = "cboxProductos";
             this.cboxProductos.Size = new System.Drawing.Size(204, 21);
             this.cboxProductos.TabIndex = 2;
-            this.cboxProductos.SelectedIndexChanged += new System.EventHandler(this.cboxProductos_SelectedIndexChanged);
+            this.cboxProductos.SelectedIndexChanged += new System.EventHandler(this.cboxProductos_SelectedIndexChanged_1);
             // 
             // btnAceptar
             // 
@@ -121,6 +121,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(100, 80);
+            this.txtCantidad.MaxLength = 8;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 20);
             this.txtCantidad.TabIndex = 10;

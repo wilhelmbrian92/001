@@ -96,7 +96,48 @@ namespace CRUD
             return 0; // Valor predeterminado si no se encuentra el producto o hay un error
         }
 
-        public bool InsertarLote(int idProducto, int cantidad, DateTime fechaVencimiento)
+        public bool InsertarLote(int idProducto, int cantidad, DateTime fechaVencimiento, out int idLote)
+        {
+
+            idLote = 0; 
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(s))
+                {
+                    connection.Open();
+
+                    // Preparar la consulta SQL para la inserción
+                    string query = "INSERT INTO Lote (ProductoID, Cantidad, FechaVencimiento) VALUES (@ProductoID, @Cantidad, @FechaVencimiento); SELECT SCOPE_IDENTITY()";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Asignar los parámetros de la consulta
+                        command.Parameters.AddWithValue("@ProductoID", idProducto);
+                        command.Parameters.AddWithValue("@Cantidad", cantidad);
+                        command.Parameters.AddWithValue("@FechaVencimiento", fechaVencimiento);
+
+
+                        // Ejecutar la consulta
+                        // int rowsAffected = command.ExecuteNonQuery();
+
+                        // return rowsAffected > 0;
+                        idLote = Convert.ToInt32(command.ExecuteScalar());
+
+                        return idLote > 0;
+
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores en caso de fallo en la inserción
+                Console.WriteLine("Ha ocurrido un error al insertar los registros en la tabla Lote: " + ex.Message);
+                return false;
+            }
+        }
+
+        public bool InsertarEntrada(int loteID, DateTime fechaEntrada, string proveedor)
         {
             try
             {
@@ -105,14 +146,14 @@ namespace CRUD
                     connection.Open();
 
                     // Preparar la consulta SQL para la inserción
-                    string query = "INSERT INTO Lote (ProductoID, Cantidad, FechaVencimiento) VALUES (@ProductoID, @Cantidad, @FechaVencimiento)";
+                    string query = "INSERT INTO Entradas (LoteID, FechaEntrada, Proveedor) VALUES (@LoteID, @FechaEntrada, @Proveedor)";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         // Asignar los parámetros de la consulta
-                        command.Parameters.AddWithValue("@ProductoID", idProducto);
-                        command.Parameters.AddWithValue("@Cantidad", cantidad);
-                        command.Parameters.AddWithValue("@FechaVencimiento", fechaVencimiento);
+                        command.Parameters.AddWithValue("@LoteID", loteID);
+                        command.Parameters.AddWithValue("@FechaEntrada", fechaEntrada);
+                        command.Parameters.AddWithValue("@Proveedor", proveedor);
 
                         // Ejecutar la consulta
                         int rowsAffected = command.ExecuteNonQuery();
@@ -124,7 +165,7 @@ namespace CRUD
             catch (Exception ex)
             {
                 // Manejo de errores en caso de fallo en la inserción
-                Console.WriteLine("Ha ocurrido un error al insertar los registros en la tabla Lote: " + ex.Message);
+                Console.WriteLine("Ha ocurrido un error al insertar el registro en la tabla Entradas: " + ex.Message);
                 return false;
             }
         }

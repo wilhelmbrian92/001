@@ -8,6 +8,9 @@ namespace CRUD
 {
     class Logica
     {
+        /// <summary>
+      
+        /// </summary>
         #region asignacion
        // instancia de la capa de datos
         Datos conexionDb = new Datos();
@@ -37,9 +40,14 @@ namespace CRUD
             return conexionDb.ObtenerIDProducto(nombreProducto);
         }
 
-        public bool InsertarLote(int idProducto, int cantidad, DateTime fechaVencimiento)
+        public bool InsertarLote(int idProducto, int cantidad, DateTime fechaVencimiento, out int idLote)
         {
-            return conexionDb.InsertarLote(idProducto, cantidad, fechaVencimiento);
+            return conexionDb.InsertarLote(idProducto, cantidad, fechaVencimiento, out idLote);
+        }
+
+        public bool InsertarEntrada(int loteID, DateTime fechaEntrada, string proveedor)
+        {
+            return conexionDb.InsertarEntrada(loteID, fechaEntrada, proveedor);
         }
     }
 
