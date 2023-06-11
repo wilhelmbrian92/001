@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+
 
 namespace CRUD
 {
     class Logica
     {
-        /// <summary>
-      
-        /// </summary>
         #region asignacion
        // instancia de la capa de datos
         Datos conexionDb = new Datos();
@@ -48,6 +47,11 @@ namespace CRUD
         public bool InsertarEntrada(int loteID, DateTime fechaEntrada, string proveedor)
         {
             return conexionDb.InsertarEntrada(loteID, fechaEntrada, proveedor);
+        }
+
+        public DataTable ObtenerVistaProductoLoteEntradas()
+        {
+            return conexionDb.ObtenerVistaProductoLoteEntradas();
         }
     }
 

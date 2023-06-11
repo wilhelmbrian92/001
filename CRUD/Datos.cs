@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace CRUD
 {
@@ -18,9 +19,8 @@ namespace CRUD
         void setNombre(string nombre) { Nombre = nombre; }
         void setTipo(string tipo) { Tipo = tipo; }
         #endregion
-
+        // conexion con base
         static string s = "workstation id=wilsql92.mssql.somee.com;packet size=4096;user id=wilhelmbrian92_SQLLogin_1;pwd=91omw2ur8i;data source=wilsql92.mssql.somee.com;persist security info=False;initial catalog=wilsql92";
-
 
         public void altaProducto(string nombre,string tipo) {
 
@@ -34,7 +34,8 @@ namespace CRUD
             
             conexion.Close();
         }
-
+        
+        //carga comboBox
         public string [] ObtenerNombresProductos()
         {
             //en este método se obtiene los nombres de todos los productos para mostrarlos en el combobox
@@ -63,7 +64,7 @@ namespace CRUD
                 }
             }
         }
-
+        //luego de cargar comboBox obtiene id prod seleccionado
         public int ObtenerIDProducto(string nombreProducto)
         {
             try
@@ -96,10 +97,11 @@ namespace CRUD
             return 0; // Valor predeterminado si no se encuentra el producto o hay un error
         }
 
+        //entrada lote
         public bool InsertarLote(int idProducto, int cantidad, DateTime fechaVencimiento, out int idLote)
         {
 
-            idLote = 0; 
+            idLote = 0;
             try
             {
                 using (SqlConnection connection = new SqlConnection(s))
@@ -137,6 +139,7 @@ namespace CRUD
             }
         }
 
+
         public bool InsertarEntrada(int loteID, DateTime fechaEntrada, string proveedor)
         {
             try
@@ -169,6 +172,41 @@ namespace CRUD
                 return false;
             }
         }
-    }
+    
+
+    //consulta
+    public DataTable ObtenerVistaProductoLoteEntradas()
+        {
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(s))
+                {
+                    connection.Open();
+
+                    string query = "SELECT * FROM VistaProductoLoteEntradas";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataAdapter dataAdapter = new SqlDataAdapter(command))
+                        {
+                            dataAdapter.Fill(dataTable);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores en caso de fallo en la consulta
+                Console.WriteLine("Ha ocurrido un error al obtener los datos: " + ex.Message);
+            }
+
+            return dataTable;
+        }
+    
+
+
+}
 
 }

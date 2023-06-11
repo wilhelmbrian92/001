@@ -34,6 +34,7 @@
             // 
             // calendarioVencimientos
             // 
+            this.calendarioVencimientos.BackColor = System.Drawing.SystemColors.Window;
             this.calendarioVencimientos.CalendarDimensions = new System.Drawing.Size(2, 2);
             this.calendarioVencimientos.Location = new System.Drawing.Point(100, 75);
             this.calendarioVencimientos.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
@@ -55,6 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.calendarioVencimientos);

@@ -12,8 +12,8 @@ namespace CRUD
 {
     public partial class Alta : Form
     {
-        
-        
+        Logica negocio = new Logica();
+
         public Alta()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace CRUD
 
                 try
                 {
-                    Logica negocio = new Logica();
+                    
                     negocio.altaProducto(txtNombre.Text, txtTipo.Text);
                     MessageBox.Show("El proceso ha finalizado exitosamente.");
                     txtNombre.Text = "";

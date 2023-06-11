@@ -13,11 +13,10 @@ namespace CRUD
 {
     public partial class Registrar_ENTRADA : Form
     {
-        
-        Logica logica = new Logica();
-        int loteID;
         int idProducto;
         string proveedor;
+        int loteID;
+        Logica logica = new Logica();
         DateTime fechaEntrada = DateTime.Now.Date;
 
         //constructor
@@ -26,7 +25,7 @@ namespace CRUD
             InitializeComponent();
 
             CargarNombresProductos();
-            
+
         }
 
         private void Registrar_ENTRADA_Load(object sender, EventArgs e)
@@ -47,14 +46,12 @@ namespace CRUD
             // Establecer la lista de sugerencias para el autocompletar utilizando los nombres de los productos
             cboxProductos.AutoCompleteCustomSource.AddRange(logica.ObtenerNombresProductos());
         }
-
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if ((cboxProductos.Text == "") || (txtCantidad.ToString() == "")) MessageBox.Show("Debe completar todos los campos");
             else
             {
-                MessageBox.Show(fechaEntrada.ToString()+proveedor+ idProducto);
+                MessageBox.Show(fechaEntrada.ToString() + proveedor + idProducto);
                 //inserta registro en tabla Lote
                 int cantidad = Convert.ToInt32(txtCantidad.Text);
                 DateTime fechaVencimiento = dtpVencimiento.Value.Date;
@@ -70,16 +67,6 @@ namespace CRUD
                 }
 
 
-                //insertar registro en tabla entradas
-
-                //para esto vamos a necesitar hacer una consulta a la BD para conocer el ID asignado al lote
-
-                //SELECT ID FROM Lote WHERE (
-               
-
-
-                //int loteID = Convert.ToInt32(txtLoteID.Text);
-
                 if (logica.InsertarEntrada(loteID, fechaEntrada, proveedor))
                 {
                     MessageBox.Show("El registro se ha insertado correctamente en la tabla Entradas.");
@@ -90,12 +77,13 @@ namespace CRUD
                 }
 
 
-
-
             }
+
+
         }
 
-            private void rbtnSecretaria_CheckedChanged(object sender, EventArgs e)
+
+        private void rbtnSecretaria_CheckedChanged(object sender, EventArgs e)
         {
             if (rbtnSecretaria.Checked) proveedor = "Secretaría";
             if (rbtnRemediar.Checked) proveedor = "Remediar";
@@ -103,14 +91,11 @@ namespace CRUD
             else rbtnSecretaria.Checked = true;
         }
 
-       
-
-        private void cboxProductos_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void cboxProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
             string nombreProducto = cboxProductos.SelectedItem.ToString();
             idProducto = logica.ObtenerIDProducto(nombreProducto);
-
-            MessageBox.Show("id producto:" + idProducto);
         }
+
     }
 }

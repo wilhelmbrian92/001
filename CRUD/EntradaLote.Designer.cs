@@ -43,35 +43,41 @@
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
+            this.lblProducto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProducto.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblProducto.Location = new System.Drawing.Point(20, 40);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(53, 13);
+            this.lblProducto.Size = new System.Drawing.Size(75, 18);
             this.lblProducto.TabIndex = 0;
             this.lblProducto.Text = "Producto:";
             // 
             // lblProveedor
             // 
             this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedor.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblProveedor.Location = new System.Drawing.Point(20, 200);
             this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(62, 13);
+            this.lblProveedor.Size = new System.Drawing.Size(89, 18);
             this.lblProveedor.TabIndex = 1;
             this.lblProveedor.Text = "Proveedor: ";
             // 
             // cboxProductos
             // 
+            this.cboxProductos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxProductos.FormattingEnabled = true;
-            this.cboxProductos.Location = new System.Drawing.Point(100, 40);
+            this.cboxProductos.Location = new System.Drawing.Point(123, 40);
             this.cboxProductos.Name = "cboxProductos";
-            this.cboxProductos.Size = new System.Drawing.Size(204, 21);
+            this.cboxProductos.Size = new System.Drawing.Size(310, 26);
             this.cboxProductos.TabIndex = 2;
-            this.cboxProductos.SelectedIndexChanged += new System.EventHandler(this.cboxProductos_SelectedIndexChanged_1);
+            this.cboxProductos.SelectedIndexChanged += new System.EventHandler(this.cboxProductos_SelectedIndexChanged);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(125, 258);
+            this.btnAceptar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Location = new System.Drawing.Point(459, 229);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(75, 38);
             this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -80,9 +86,11 @@
             // rbtnSecretaria
             // 
             this.rbtnSecretaria.AutoSize = true;
-            this.rbtnSecretaria.Location = new System.Drawing.Point(100, 200);
+            this.rbtnSecretaria.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnSecretaria.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rbtnSecretaria.Location = new System.Drawing.Point(123, 200);
             this.rbtnSecretaria.Name = "rbtnSecretaria";
-            this.rbtnSecretaria.Size = new System.Drawing.Size(75, 17);
+            this.rbtnSecretaria.Size = new System.Drawing.Size(98, 22);
             this.rbtnSecretaria.TabIndex = 4;
             this.rbtnSecretaria.TabStop = true;
             this.rbtnSecretaria.Text = "Secretaría";
@@ -92,9 +100,11 @@
             // rbtnRemediar
             // 
             this.rbtnRemediar.AutoSize = true;
-            this.rbtnRemediar.Location = new System.Drawing.Point(200, 200);
+            this.rbtnRemediar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnRemediar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rbtnRemediar.Location = new System.Drawing.Point(223, 200);
             this.rbtnRemediar.Name = "rbtnRemediar";
-            this.rbtnRemediar.Size = new System.Drawing.Size(70, 17);
+            this.rbtnRemediar.Size = new System.Drawing.Size(95, 22);
             this.rbtnRemediar.TabIndex = 5;
             this.rbtnRemediar.TabStop = true;
             this.rbtnRemediar.Text = "Remediar";
@@ -103,41 +113,47 @@
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblCantidad.Location = new System.Drawing.Point(20, 80);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(52, 13);
+            this.lblCantidad.Size = new System.Drawing.Size(76, 18);
             this.lblCantidad.TabIndex = 7;
             this.lblCantidad.Text = "Cantidad:";
             // 
             // lblVencimiento
             // 
             this.lblVencimiento.AutoSize = true;
+            this.lblVencimiento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVencimiento.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblVencimiento.Location = new System.Drawing.Point(20, 160);
             this.lblVencimiento.Name = "lblVencimiento";
-            this.lblVencimiento.Size = new System.Drawing.Size(68, 13);
+            this.lblVencimiento.Size = new System.Drawing.Size(98, 18);
             this.lblVencimiento.TabIndex = 8;
             this.lblVencimiento.Text = "Vencimiento:";
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(100, 80);
-            this.txtCantidad.MaxLength = 8;
+            this.txtCantidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.Location = new System.Drawing.Point(123, 80);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
+            this.txtCantidad.Size = new System.Drawing.Size(71, 26);
             this.txtCantidad.TabIndex = 10;
             // 
             // dtpVencimiento
             // 
-            this.dtpVencimiento.Location = new System.Drawing.Point(100, 160);
+            this.dtpVencimiento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpVencimiento.Location = new System.Drawing.Point(123, 160);
             this.dtpVencimiento.Name = "dtpVencimiento";
-            this.dtpVencimiento.Size = new System.Drawing.Size(200, 20);
+            this.dtpVencimiento.Size = new System.Drawing.Size(310, 26);
             this.dtpVencimiento.TabIndex = 11;
             // 
             // Registrar_ENTRADA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 293);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.ClientSize = new System.Drawing.Size(565, 293);
             this.Controls.Add(this.dtpVencimiento);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblVencimiento);
