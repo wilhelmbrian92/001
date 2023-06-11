@@ -36,6 +36,11 @@ namespace CRUD
         {
             return conexionDb.ObtenerIDProducto(nombreProducto);
         }
+
+        public bool InsertarLote(int idProducto, int cantidad, DateTime fechaVencimiento)
+        {
+            return conexionDb.InsertarLote(idProducto, cantidad, fechaVencimiento);
+        }
     }
 
 }

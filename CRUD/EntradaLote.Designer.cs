@@ -34,10 +34,8 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.rbtnSecretaria = new System.Windows.Forms.RadioButton();
             this.rbtnRemediar = new System.Windows.Forms.RadioButton();
-            this.lblLote = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.lblVencimiento = new System.Windows.Forms.Label();
-            this.txtLote = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.dtpVencimiento = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
@@ -102,15 +100,6 @@
             this.rbtnRemediar.Text = "Remediar";
             this.rbtnRemediar.UseVisualStyleBackColor = true;
             // 
-            // lblLote
-            // 
-            this.lblLote.AutoSize = true;
-            this.lblLote.Location = new System.Drawing.Point(20, 120);
-            this.lblLote.Name = "lblLote";
-            this.lblLote.Size = new System.Drawing.Size(46, 13);
-            this.lblLote.TabIndex = 6;
-            this.lblLote.Text = "N° Lote:";
-            // 
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
@@ -128,13 +117,6 @@
             this.lblVencimiento.Size = new System.Drawing.Size(68, 13);
             this.lblVencimiento.TabIndex = 8;
             this.lblVencimiento.Text = "Vencimiento:";
-            // 
-            // txtLote
-            // 
-            this.txtLote.Location = new System.Drawing.Point(100, 120);
-            this.txtLote.Name = "txtLote";
-            this.txtLote.Size = new System.Drawing.Size(100, 20);
-            this.txtLote.TabIndex = 9;
             // 
             // txtCantidad
             // 
@@ -157,10 +139,8 @@
             this.ClientSize = new System.Drawing.Size(330, 293);
             this.Controls.Add(this.dtpVencimiento);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.txtLote);
             this.Controls.Add(this.lblVencimiento);
             this.Controls.Add(this.lblCantidad);
-            this.Controls.Add(this.lblLote);
             this.Controls.Add(this.rbtnRemediar);
             this.Controls.Add(this.rbtnSecretaria);
             this.Controls.Add(this.btnAceptar);
@@ -183,10 +163,8 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.RadioButton rbtnSecretaria;
         private System.Windows.Forms.RadioButton rbtnRemediar;
-        private System.Windows.Forms.Label lblLote;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Label lblVencimiento;
-        private System.Windows.Forms.TextBox txtLote;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.DateTimePicker dtpVencimiento;
     }

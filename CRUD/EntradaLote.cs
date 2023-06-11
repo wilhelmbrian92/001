@@ -16,6 +16,7 @@ namespace CRUD
         int idProducto;
         string proveedor;
         Logica logica = new Logica();
+        DateTime fechaEntrada = DateTime.Today;
 
         //constructor
         public Registrar_ENTRADA()
@@ -46,7 +47,19 @@ namespace CRUD
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(idProducto.ToString()+proveedor);
+            MessageBox.Show(idProducto.ToString()+proveedor+fechaEntrada.ToString());
+
+            int cantidad = Convert.ToInt32(txtCantidad.Text);
+            DateTime fechaVencimiento = dtpVencimiento.Value;
+
+            if (logica.InsertarLote(idProducto, cantidad, fechaVencimiento))
+            {
+                Console.WriteLine("Los registros se han insertado correctamente en la tabla Lote.");
+            }
+            else
+            {
+                Console.WriteLine("Ha ocurrido un error al insertar los registros en la tabla Lote.");
+            }
         }
 
         private void rbtnSecretaria_CheckedChanged(object sender, EventArgs e)
