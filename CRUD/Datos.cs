@@ -139,7 +139,6 @@ namespace CRUD
             }
         }
 
-
         public bool InsertarEntrada(int loteID, DateTime fechaEntrada, string proveedor)
         {
             try
@@ -173,9 +172,8 @@ namespace CRUD
             }
         }
     
-
     //consulta
-    public DataTable ObtenerVistaProductoLoteEntradas()
+        public DataTable ObtenerVistaProductoLoteEntradas()
         {
             DataTable dataTable = new DataTable();
 
@@ -204,9 +202,34 @@ namespace CRUD
 
             return dataTable;
         }
-    
+
+        public DateTime[] ObtenerFechasVencimiento()
+        {
+            List<DateTime> fechasVencimiento = new List<DateTime>();
+
+            using (SqlConnection connection = new SqlConnection(s))
+            {
+                connection.Open();
+
+                string query = "SELECT FechaVencimiento FROM Lote"; // Query para obtener las fechas de vencimiento de todos los lotes
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            DateTime fechaVencimiento = reader.GetDateTime(0);
+                            fechasVencimiento.Add(fechaVencimiento);
+                        }
+                    }
+                }
+            }
+
+            return fechasVencimiento.ToArray();
+        }
 
 
-}
+    }
 
 }

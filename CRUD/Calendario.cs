@@ -12,7 +12,7 @@ namespace CRUD
 {
     public partial class Calendario : Form
     {
-
+        Logica calendarioNegocio = new Logica();
       
         public Calendario()
         {
@@ -21,28 +21,19 @@ namespace CRUD
 
         private void Calendario_Load(object sender, EventArgs e)
         {
-            // Obtener las fechas de vencimiento de los lotes (ejemplo)
-            DateTime[] fechasVencimiento = ObtenerFechasVencimientoLotes();
-
-            // Recorrer las fechas y resaltar las fechas de vencimiento en rojo
-            foreach (DateTime fecha in fechasVencimiento)
-            {
-                calendarioVencimientos.AddBoldedDate(fecha);
-                calendarioVencimientos.UpdateBoldedDates();
-            }
-
-            calendarioVencimientos.Update();
+            CargarFechasResaltadas();
         }
-        // Método de ejemplo para obtener las fechas de vencimiento de los lotes (reemplazar con tus propios datos o lógica)
-        private DateTime[] ObtenerFechasVencimientoLotes()
+
+        private void CargarFechasResaltadas()
         {
-            // Ejemplo: obtén las fechas de vencimiento desde una base de datos o cualquier otra fuente de datos
-            DateTime fecha1 = new DateTime(2023, 6, 15);
-            DateTime fecha2 = new DateTime(2023, 6, 20);
-            DateTime fecha3 = new DateTime(2023, 6, 25);
+            DateTime[] fechasResaltadas = calendarioNegocio.ObtenerFechasVencimientoResaltadas();
 
-            return new DateTime[] { fecha1, fecha2, fecha3 };
+            foreach (DateTime fecha in fechasResaltadas)
+            {
+                calendarioVencimientos.BoldedDates = new DateTime[] { fecha };
+            }
         }
+
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

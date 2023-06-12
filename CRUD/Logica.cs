@@ -53,6 +53,29 @@ namespace CRUD
         {
             return conexionDb.ObtenerVistaProductoLoteEntradas();
         }
+
+        public DateTime[] ObtenerFechasVencimientoResaltadas()
+        {
+            List<DateTime> fechasResaltadas = new List<DateTime>();
+            DateTime[] fechasVencimiento = conexionDb.ObtenerFechasVencimiento();
+
+            foreach (DateTime fecha in fechasVencimiento)
+            {
+                if (EsFechaVencimientoResaltada(fecha))
+                {
+                    fechasResaltadas.Add(fecha);
+                }
+            }
+
+            return fechasResaltadas.ToArray();
+        }
+
+        private bool EsFechaVencimientoResaltada(DateTime fecha)
+        {
+            // Implementa tu lógica para determinar si la fecha de vencimiento debe ser resaltada en negrita.
+            // Por ejemplo, puedes comparar la fecha actual con la fecha de vencimiento y devolver true si es menor o igual.
+            return fecha <= DateTime.Now;
+        }
     }
 
 }

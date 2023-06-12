@@ -34,6 +34,7 @@
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -50,8 +51,8 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(555, 174);
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(555, 224);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 36);
             this.button1.TabIndex = 1;
@@ -61,50 +62,62 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(110, 37);
+            this.txtNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(110, 87);
             this.txtNombre.MaxLength = 256;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(536, 32);
+            this.txtNombre.Size = new System.Drawing.Size(536, 26);
             this.txtNombre.TabIndex = 2;
             // 
             // txtTipo
             // 
-            this.txtTipo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipo.Location = new System.Drawing.Point(110, 106);
+            this.txtTipo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipo.Location = new System.Drawing.Point(110, 156);
             this.txtTipo.MaxLength = 256;
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(536, 32);
+            this.txtTipo.Size = new System.Drawing.Size(536, 26);
             this.txtTipo.TabIndex = 3;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblNombre.Location = new System.Drawing.Point(17, 43);
+            this.lblNombre.Location = new System.Drawing.Point(17, 93);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(88, 24);
+            this.lblNombre.Size = new System.Drawing.Size(68, 18);
             this.lblNombre.TabIndex = 4;
             this.lblNombre.Text = "Nombre:";
             // 
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblTipo.Location = new System.Drawing.Point(50, 114);
+            this.lblTipo.Location = new System.Drawing.Point(50, 164);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(55, 24);
+            this.lblTipo.Size = new System.Drawing.Size(42, 18);
             this.lblTipo.TabIndex = 5;
             this.lblTipo.Text = "Tipo:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Location = new System.Drawing.Point(12, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(355, 18);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Ingrese nombre y tipo de nuevo producto a cargar:";
             // 
             // Alta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(691, 242);
+            this.ClientSize = new System.Drawing.Size(691, 333);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtTipo);
@@ -114,7 +127,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Alta";
-            this.Text = "Alta";
+            this.Text = "Alta de nuevo producto";
             this.ResizeEnd += new System.EventHandler(this.Alta_ResizeEnd);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,5 +142,6 @@
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.Label label1;
     }
 }
