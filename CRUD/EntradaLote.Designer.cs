@@ -56,7 +56,7 @@
             this.lblProveedor.AutoSize = true;
             this.lblProveedor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProveedor.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblProveedor.Location = new System.Drawing.Point(20, 200);
+            this.lblProveedor.Location = new System.Drawing.Point(20, 160);
             this.lblProveedor.Name = "lblProveedor";
             this.lblProveedor.Size = new System.Drawing.Size(89, 18);
             this.lblProveedor.TabIndex = 1;
@@ -75,7 +75,7 @@
             // btnAceptar
             // 
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(459, 229);
+            this.btnAceptar.Location = new System.Drawing.Point(358, 190);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 38);
             this.btnAceptar.TabIndex = 3;
@@ -88,7 +88,7 @@
             this.rbtnSecretaria.AutoSize = true;
             this.rbtnSecretaria.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnSecretaria.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.rbtnSecretaria.Location = new System.Drawing.Point(123, 200);
+            this.rbtnSecretaria.Location = new System.Drawing.Point(123, 160);
             this.rbtnSecretaria.Name = "rbtnSecretaria";
             this.rbtnSecretaria.Size = new System.Drawing.Size(98, 22);
             this.rbtnSecretaria.TabIndex = 4;
@@ -102,7 +102,7 @@
             this.rbtnRemediar.AutoSize = true;
             this.rbtnRemediar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnRemediar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.rbtnRemediar.Location = new System.Drawing.Point(223, 200);
+            this.rbtnRemediar.Location = new System.Drawing.Point(223, 160);
             this.rbtnRemediar.Name = "rbtnRemediar";
             this.rbtnRemediar.Size = new System.Drawing.Size(95, 22);
             this.rbtnRemediar.TabIndex = 5;
@@ -126,7 +126,7 @@
             this.lblVencimiento.AutoSize = true;
             this.lblVencimiento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVencimiento.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblVencimiento.Location = new System.Drawing.Point(20, 160);
+            this.lblVencimiento.Location = new System.Drawing.Point(20, 120);
             this.lblVencimiento.Name = "lblVencimiento";
             this.lblVencimiento.Size = new System.Drawing.Size(98, 18);
             this.lblVencimiento.TabIndex = 8;
@@ -143,7 +143,7 @@
             // dtpVencimiento
             // 
             this.dtpVencimiento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpVencimiento.Location = new System.Drawing.Point(123, 160);
+            this.dtpVencimiento.Location = new System.Drawing.Point(123, 120);
             this.dtpVencimiento.Name = "dtpVencimiento";
             this.dtpVencimiento.Size = new System.Drawing.Size(310, 26);
             this.dtpVencimiento.TabIndex = 11;
@@ -153,7 +153,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(565, 293);
+            this.ClientSize = new System.Drawing.Size(471, 252);
             this.Controls.Add(this.dtpVencimiento);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblVencimiento);
@@ -164,6 +164,8 @@
             this.Controls.Add(this.cboxProductos);
             this.Controls.Add(this.lblProveedor);
             this.Controls.Add(this.lblProducto);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Registrar_ENTRADA";
             this.Text = "Registrar ENTRADA";
             this.Load += new System.EventHandler(this.Registrar_ENTRADA_Load);

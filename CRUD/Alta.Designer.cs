@@ -51,7 +51,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(355, 261);
+            this.button1.Location = new System.Drawing.Point(555, 174);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 36);
             this.button1.TabIndex = 1;
@@ -62,7 +62,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(135, 75);
+            this.txtNombre.Location = new System.Drawing.Point(110, 37);
             this.txtNombre.MaxLength = 256;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(536, 32);
@@ -71,7 +71,7 @@
             // txtTipo
             // 
             this.txtTipo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipo.Location = new System.Drawing.Point(135, 128);
+            this.txtTipo.Location = new System.Drawing.Point(110, 106);
             this.txtTipo.MaxLength = 256;
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(536, 32);
@@ -82,7 +82,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblNombre.Location = new System.Drawing.Point(42, 81);
+            this.lblNombre.Location = new System.Drawing.Point(17, 43);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(88, 24);
             this.lblNombre.TabIndex = 4;
@@ -93,7 +93,7 @@
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblTipo.Location = new System.Drawing.Point(75, 136);
+            this.lblTipo.Location = new System.Drawing.Point(50, 114);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(55, 24);
             this.lblTipo.TabIndex = 5;
@@ -104,17 +104,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(781, 343);
+            this.ClientSize = new System.Drawing.Size(691, 242);
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Alta";
             this.Text = "Alta";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResizeEnd += new System.EventHandler(this.Alta_ResizeEnd);
             this.ResumeLayout(false);
             this.PerformLayout();

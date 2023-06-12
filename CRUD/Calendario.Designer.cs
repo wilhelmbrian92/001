@@ -60,6 +60,8 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.calendarioVencimientos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Calendario";
             this.Text = "Calendario";
             this.Load += new System.EventHandler(this.Calendario_Load);

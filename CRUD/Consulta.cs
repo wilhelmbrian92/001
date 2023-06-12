@@ -31,6 +31,8 @@ namespace CRUD
         private void Consulta_Load(object sender, EventArgs e)
         {
             CargarDatos();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+           
         }
 
         private void CargarDatos()
